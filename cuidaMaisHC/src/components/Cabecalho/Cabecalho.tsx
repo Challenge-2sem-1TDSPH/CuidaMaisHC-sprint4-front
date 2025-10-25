@@ -1,5 +1,5 @@
 import Menu from "../Menu/Menu";
-import logo from "../../../public/Images/ImgCabecalho/logohc.png"
+import logo from"../../Images/ImgCabecalho/logohc.png"
 import { Link, useLocation, useParams } from "react-router-dom";
 import { FiArrowLeft } from 'react-icons/fi';
 

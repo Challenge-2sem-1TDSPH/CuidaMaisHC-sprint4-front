@@ -7,4 +7,4 @@ export default function CardIntegrantes(props:{integrante:TipoIntegrante}){
             <img className="imgIntegrantes" src={props.integrante.urlImg} alt="Foto do integrante" />
         </div>
     );
-}
+} 
