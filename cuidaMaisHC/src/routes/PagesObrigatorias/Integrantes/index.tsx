@@ -1,26 +1,17 @@
-import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import type { TipoIntegrante } from "../../../types/Integrantes/tipoIntegrante";
+import { Link } from "react-router-dom";
 import CardIntegrantes from "../../../components/CardIntegrante/CardIntegrante";
-
+import type { TipoIntegrante } from "../../../types/tipos/Integrantes/tipoIntegrante";
+import {integrantes} from "../../../data/integrantes";
 
 export default function Integrantes(){
-    const{ id } = useParams<string>();
-    const [integrantes, setIntegrantes] = useState<TipoIntegrante[]>([]);
 
-    useEffect(() => {
-        const fetchdata = async ()=>{
-            const response = await fetch("http://localhost:3001/integrantes");
-            const data: TipoIntegrante[] = await response.json();
-            setIntegrantes(data);
-        }
-        fetchdata();
-    }, [id]);
+    const todosIntegrante: TipoIntegrante[] = integrantes;
+    
 
     return(
         <main className="pageIntegrante">
             <h1>Integrantes</h1>
-            <div className="integrante">{integrantes.map((i) => (
+            <div className="integrante">{todosIntegrante.map((i) => (
                 <Link to={`/integrantes/${i.id}`}>
                     <CardIntegrantes integrante={i}/>
                 </Link>
@@ -29,5 +20,5 @@ export default function Integrantes(){
             <p>Clique no Card para ver detalhes dos integrantes da 1TDSPH</p>
         </main>
     );
-}
- 
+} 
+  

@@ -1,5 +1,5 @@
 export type TipoIntegrante = {
-    id:string;
+    id:number;
     nome: string;
     urlImg: string;
     paragrafo:string;
