@@ -1,5 +1,5 @@
 export type TipoUnidade = {
-    id:number;
+    idUnidade:number;
     idLogradouro:number;
     nomeUnidade: string;
     dataFundacao: string;
