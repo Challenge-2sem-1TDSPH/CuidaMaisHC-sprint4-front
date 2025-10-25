@@ -25,7 +25,6 @@ export default function Agendamento(){
                 register={register}
                 onSubmit={onSubmit}
             />
-
         </main>
     );
 }

@@ -2,7 +2,7 @@ import vilaMariana from "../../../../public/Images/ImgPagesObrigatorias/Contato/
 import unidadeClinicas from "../../../../public/Images/ImgPagesObrigatorias/Contato/Unidade-Clinicas.png"
 import { MdPhone } from 'react-icons/md'
 
-
+ 
 export default function Contato(){
     return(
         <main className="pageContato">

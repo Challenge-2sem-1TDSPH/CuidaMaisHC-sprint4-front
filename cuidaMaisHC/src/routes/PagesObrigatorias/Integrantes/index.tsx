@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import type { TipoIntegrante } from "../../../types/Integrantes/tipoIntegrante";
+import type { TipoIntegrante } from "../../../types/tipos/Integrantes/tipoIntegrante";
 import CardIntegrantes from "../../../components/CardIntegrante/CardIntegrante";
 
 

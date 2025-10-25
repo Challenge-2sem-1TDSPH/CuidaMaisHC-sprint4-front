@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, Link  } from "react-router-dom";
-import type { TipoIntegrante } from "../../../types/Integrantes/tipoIntegrante";
+import type { TipoIntegrante } from "../../../types/tipos/Integrantes/tipoIntegrante";
 import { FaGithub, FaLinkedin} from "react-icons/fa";
 
-export default function IntegrantesDetails(){
+export default function IntegrantesDetails(){ 
     const {id} = useParams<string>();
 
     const [integrante, setIntegrante] = useState<TipoIntegrante>();

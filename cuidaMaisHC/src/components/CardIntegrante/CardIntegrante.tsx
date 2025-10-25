@@ -1,4 +1,4 @@
-import type { TipoIntegrante } from "../../types/Integrantes/tipoIntegrante";
+import type { TipoIntegrante } from "../../types/tipos/Integrantes/tipoIntegrante";
 
 export default function CardIntegrantes(props:{integrante:TipoIntegrante}){
     return(
