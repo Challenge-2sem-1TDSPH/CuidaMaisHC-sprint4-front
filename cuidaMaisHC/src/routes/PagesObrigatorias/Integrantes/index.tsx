@@ -4,9 +4,8 @@ import type { TipoIntegrante } from "../../../types/tipos/Integrantes/tipoIntegr
 import {integrantes} from "../../../data/integrantes";
 
 export default function Integrantes(){
-
-    const todosIntegrante: TipoIntegrante[] = integrantes;
     
+    const todosIntegrante: TipoIntegrante[] = integrantes;
 
     return(
         <main className="pageIntegrante">

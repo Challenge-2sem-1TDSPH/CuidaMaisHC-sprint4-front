@@ -2,35 +2,28 @@ import { useNavigate, useParams } from "react-router-dom";
 import FormLogin from "../../../components/FormLogin/FormLogin";
 import type { tipoLogin } from "../../../types/tipoForm/tipoLogin";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
-
+import type { TipoPaciente } from "../../../types/tipos/Pacientes/tipoPaciente";
+const URL_API = import.meta.env.VITE_URL_API;
 
 export default function Login(){
-    const { cpf } = useParams<{ cpf: string }>();
     const navigate = useNavigate();
-    const {register, handleSubmit, setValue} = useForm<tipoLogin>();
-
-    useEffect(() => {
-      if (cpf) {
-        setValue("cpf", cpf);
-      }
-    }, [cpf, setValue]);
+    const {register, handleSubmit} = useForm<tipoLogin>();
 
     const onSubmit = handleSubmit(async (data) => {
     try {
-      const response = await fetch(`http://localhost:3001/usuarios?cpf=${data.cpf}`);
-      const usuarios = await response.json();
-
-      if (usuarios.length === 0) {
-        alert("CPF não encontrado!");
-        return;
-      }
-      const usuario = usuarios[0];
-      if (usuario.senha === data.senha) {
+      const response = await fetch(`${URL_API}/paciente`,{
+            method:"GET",
+            headers:{
+                "Content-Type": "application/json"
+            },
+        });
+      const pacientes: TipoPaciente[] = await response.json();
+      const pacientesEncontrados = pacientes.filter((p) => p.senha === data.senha)
+      if (pacientesEncontrados.length > 0) {
         alert("Login realizado com sucesso!");
         navigate("/");
       } else {
-        alert("Senha incorreta.");
+        alert("CPF ou senha incorretos.");
       }
     } catch (error) {
       console.error("Erro ao fazer login:", error);
