@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import FormCadastro from "../../../components/FormCadastro/FormCadastro";
 import { useForm } from "react-hook-form";
 import type { tipoCadastro } from "../../../types/tipoForm/tipoCadastro";
-
+const URL_API = import.meta.env.VITE_URL_API;
 
 export default function Cadasro(){
 
@@ -10,7 +10,7 @@ export default function Cadasro(){
     const {register, handleSubmit} = useForm<tipoCadastro>();
 
     const onSubmit =  handleSubmit(async (data) =>{
-        await fetch("http://localhost:3001/usuarios",{
+        await fetch(`${URL_API}/paciente`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
