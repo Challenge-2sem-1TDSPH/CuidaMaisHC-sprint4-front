@@ -9,8 +9,8 @@ export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro
                     <input type="text" {...register("cpf", { required: true, maxLength: 11})}/>
                 </div>
                 <div>
-                    <label>Número celular: </label>
-                    <input type="text" {...register("telefone", { required: true, maxLength: 11, minLength:11})}/>
+                    <label>Data de Nascimento: </label> 
+                    <input type="date" {...register("datanascimento", { required: true})}/>     
                 </div>
                 <div>
                     <label>Nome: </label>
@@ -18,7 +18,7 @@ export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro
                 </div>
                 <div>
                     <label>Senha: </label>
-                    <input type="password" {...register("senha", { required: true, maxLength: 50})}/>
+                    <input type="password" {...register("senha", { required: true, maxLength: 80})}/>
                 </div>
                 <div className="divButton">
                     <button type="submit">Cadastrar</button>
