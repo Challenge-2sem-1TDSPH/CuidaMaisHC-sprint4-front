@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import bot from "../../../../public/Images/ImgSolucao/Guia/bot.png";
-import guia from "../../../../public/Images/ImgSolucao/Guia/guia.png";
+import bot from "../../../Images/ImgPagesSolucao/Guia/bot.png";
+import guia from "../../../Images/ImgPagesSolucao/Guia/guia.png";
 
 export default function Guia(){
     return(
