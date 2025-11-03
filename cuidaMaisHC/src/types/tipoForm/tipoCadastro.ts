@@ -1,7 +1,7 @@
 export type tipoCadastro =  {
     idlogradouro:number | null;
     nome: string;
-    datanascimento: string;
+    dataNascimento: string;
     cpf: string;
     senha: string;
 } 

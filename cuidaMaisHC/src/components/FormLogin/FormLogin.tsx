@@ -18,4 +18,4 @@ export default function FormLogin({register, onSubmit}: TipoPropsFormLogin){
             </form>
         </div>
     );
-}
+} 

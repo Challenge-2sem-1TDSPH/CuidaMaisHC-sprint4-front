@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FormLogin from "../../../components/FormLogin/FormLogin";
 import type { tipoLogin } from "../../../types/tipoForm/tipoLogin";
 import { useForm } from "react-hook-form";
@@ -8,7 +8,7 @@ const URL_API = import.meta.env.VITE_URL_API;
 export default function Login(){
     const navigate = useNavigate();
     const {register, handleSubmit} = useForm<tipoLogin>();
-
+ 
     const onSubmit = handleSubmit(async (data) => {
     try {
       const response = await fetch(`${URL_API}/paciente`,{

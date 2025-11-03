@@ -9,7 +9,6 @@ export default function LoginOrCreateAccount(){
     const navigate = useNavigate();
     const {register, handleSubmit} = useForm<tipoLoginOrCreateAccount>();
 
-
     const onSubmit = handleSubmit(async (data) => {
     try {
       const response = await fetch(`${URL_API}/paciente`,{
@@ -25,7 +24,6 @@ export default function LoginOrCreateAccount(){
     } else {
       navigate("/login-or-create-account/cadastro");
     }
-
     } catch (error) {
       console.error("Erro ao procurar cpf:", error);
       alert("Erro ao procurar cpf.");

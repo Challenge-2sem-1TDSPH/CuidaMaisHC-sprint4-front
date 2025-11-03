@@ -4,17 +4,17 @@ export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro
     return( 
         <div>
             <form className="formCadastro" onSubmit={onSubmit}>
-                <div>
-                    <label>Cpf: </label>
-                    <input type="text" {...register("cpf", { required: true, maxLength: 11})}/>
+                 <div>
+                    <label>Nome: </label>
+                    <input type="text" {...register("nome", { required: true, maxLength: 200})} />
                 </div>
                 <div>
                     <label>Data de Nascimento: </label> 
-                    <input type="date" {...register("datanascimento", { required: true})}/>     
+                    <input type="date" {...register("dataNascimento", { required: true})}/>     
                 </div>
                 <div>
-                    <label>Nome: </label>
-                    <input type="text" {...register("nome", { required: true, maxLength: 200})} />
+                    <label>Cpf: </label>
+                    <input type="text" {...register("cpf", { required: true, maxLength: 11})}/>
                 </div>
                 <div>
                     <label>Senha: </label>
