@@ -13,7 +13,7 @@ export default function Contato(){
             const data: TipoUnidade[] = await response.json();
             setUnidades(data);
         }
-        fetchdata();
+        fetchdata(); 
     }, []);
 
     return(
