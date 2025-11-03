@@ -4,10 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/cuidamaishc"
+  base: "/cuidamaishc",
   plugins: [
     react(),
     tailwindcss(),
-  ],
-  base: "/cuidaMaisHC"
+  ]
 })
