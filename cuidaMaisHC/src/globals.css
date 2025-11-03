@@ -19,7 +19,7 @@
 @import "./routes/PagesObrigatorias/FAQ/FAQ.css";
 @import "./routes/PagesObrigatorias/Error/Error.css";
 @import "./routes/PagesObrigatorias/Home/home.css";
-
+ 
 
 :root { 
   scroll-behavior: smooth;

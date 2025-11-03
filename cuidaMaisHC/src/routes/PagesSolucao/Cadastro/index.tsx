@@ -2,20 +2,29 @@ import { useNavigate } from "react-router-dom";
 import FormCadastro from "../../../components/FormCadastro/FormCadastro";
 import { useForm } from "react-hook-form";
 import type { tipoCadastro } from "../../../types/tipoForm/tipoCadastro";
+const URL_API = import.meta.env.VITE_URL_API;
 
-
-export default function Cadasro(){
+export default function Cadastro(){
 
     const navigate = useNavigate();
     const {register, handleSubmit} = useForm<tipoCadastro>();
 
     const onSubmit =  handleSubmit(async (data) =>{
-        await fetch("http://localhost:3001/usuarios",{
+        const dataFormatada = data.dataNascimento.split("-").reverse().join("/");
+        const dados = {
+            nome: data.nome,
+            idlogradouro: data.idlogradouro, 
+            dataNascimento: dataFormatada,
+            cpf: data.cpf,
+            senha: data.senha
+        };
+
+        await fetch(`${URL_API}/paciente`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(dados)
         })
         alert("Cadastro feito com sucesso!");
         navigate("/");
