@@ -10,7 +10,7 @@ export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro
                 </div>
                 <div>
                     <label>Data de Nascimento: </label> 
-                    <input type="date" {...register("dataNascimento", { required: true})}/>     
+                    <input type="date" {...register("dataNascimento", { required: true})}/>
                 </div>
                 <div>
                     <label>Cpf: </label>
@@ -21,7 +21,7 @@ export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro
                     <input type="password" {...register("senha", { required: true, maxLength: 80})}/>
                 </div>
                 <div className="divButton">
-                    <button type="submit">Cadastrar</button>
+                    <button className="hover:cursor-pointer" type="submit">Cadastrar</button>
                 </div>
             </form>
         </div>

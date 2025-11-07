@@ -28,8 +28,10 @@ export default function Cadastro(){
         })
         alert("Cadastro feito com sucesso!");
         navigate("/");
+        window.location.reload();
+        sessionStorage.setItem("paciente", JSON.stringify(data));
     }); 
-  
+
     return(
         <main className="pageCadastro">
             <h1>Cadastro</h1>
