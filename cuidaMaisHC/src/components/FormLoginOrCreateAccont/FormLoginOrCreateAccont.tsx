@@ -9,7 +9,7 @@ export default function FormloginOrCreateAccount({register, onSubmit}: TipoProps
                     <input type="text" placeholder="Digite seu cpf"{...register("cpf", { required: true, maxLength: 11})}/>
                 </div>
                 <div className="divButton">
-                    <button type="submit">Entrar</button>
+                    <button className="hover:cursor-pointer" type="submit">Entrar</button>
                 </div>
             </form>
         </div>

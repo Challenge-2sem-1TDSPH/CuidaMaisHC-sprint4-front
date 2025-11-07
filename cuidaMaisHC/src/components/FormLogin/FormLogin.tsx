@@ -13,9 +13,9 @@ export default function FormLogin({register, onSubmit}: TipoPropsFormLogin){
                     <input type="password" {...register("senha", { required: true, maxLength: 80})}/>
                 </div>
                 <div className="divButton">
-                    <button type="submit">Entrar</button>
+                    <button className="hover:cursor-pointer" type="submit">Entrar</button>
                 </div>
             </form>
         </div>
     );
-} 
+}
