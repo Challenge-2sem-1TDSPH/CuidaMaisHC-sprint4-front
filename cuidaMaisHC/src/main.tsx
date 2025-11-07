@@ -27,8 +27,8 @@ const router = createBrowserRouter([
     {path:"/login-or-create-account/login/:cpf", element:<Login/>},
     {path:"/login-or-create-account/cadastro", element: <Cadastro/>},
     {path:"/guia", element:<Guia/>}
-  ]}
-]);
+  ],},
+],{basename: import.meta.env.BASE_URL});
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

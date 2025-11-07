@@ -4,9 +4,11 @@ import type { TipoUnidade } from "../../types/tipos/Unidades/tipoUnidade";
 const VITE_URL_API = import.meta.env.VITE_URL_API;
 
 export default function CardUnidade(props:{unidade:TipoUnidade}) {
+
     const idLogradouro = props.unidade.idLogradouro;
+
     const [logradouro, setLogradouro] = useState<TipoLogradouro>();
-    
+
     useEffect(() => {
         const fetchdata = async ()=>{
             const response = await fetch(`${VITE_URL_API}/logradouro/${idLogradouro}`);

@@ -101,7 +101,7 @@ export default function FormAgendamento({register, onSubmit}: tipoFormAgendament
                     <input type="text"  placeholder="Opcional"{...register("observacoes", { required: false, maxLength: 200})}/>
                 </div>
                 <div className="divButton">
-                    <button type="submit">Agendar</button>
+                    <button className="hover:cursor-pointer" type="submit">Agendar</button>
                 </div>
             </form>
         </div>

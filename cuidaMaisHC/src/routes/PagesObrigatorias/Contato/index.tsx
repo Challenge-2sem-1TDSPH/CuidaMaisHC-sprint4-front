@@ -9,7 +9,7 @@ export default function Contato(){
 
     useEffect(() => {
         const fetchdata = async ()=>{
-            const response = await fetch(`${VITE_URL_API}/unidadeHC`);
+            const response = await fetch(`${VITE_URL_API}/unidadehc`);
             const data: TipoUnidade[] = await response.json();
             setUnidades(data);
         }

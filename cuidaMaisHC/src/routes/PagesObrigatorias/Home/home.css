@@ -1,4 +1,4 @@
- @layer routes{
+@layer routes{
     .pageHome{ 
         @apply p-5 lg:mt-40 xl:mt-40 2xl:mt-40;
         & h1{
@@ -10,6 +10,9 @@
 
         & .sobre{
             @apply my-16 flex flex-col gap-2 m-6 text-center lg:px-40 lg:text-left 2xl:px-100;
+        }
+        & .paciente{
+            @apply my-16 flex flex-col gap-2 m-6 text-center lg:px-40 lg:text-center 2xl:px-100;
         }
 
         & .beneficios{

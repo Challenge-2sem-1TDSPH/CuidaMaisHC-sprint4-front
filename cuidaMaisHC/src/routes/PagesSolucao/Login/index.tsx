@@ -21,7 +21,9 @@ export default function Login(){
       const pacientesEncontrados = pacientes.filter((p) => p.senha === data.senha)
       if (pacientesEncontrados.length > 0) {
         alert("Login realizado com sucesso!");
+        sessionStorage.setItem("paciente", JSON.stringify(pacientesEncontrados[0]));
         navigate("/");
+        window.location.reload();
       } else {
         alert("CPF ou senha incorretos.");
       }
