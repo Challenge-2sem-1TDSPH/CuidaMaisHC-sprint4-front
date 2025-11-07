@@ -1,11 +1,34 @@
 import { Link } from "react-router-dom";
 import { MdElderly } from "react-icons/md";
 import { FaUserAlt, FaMobileAlt, FaRobot  } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import type { TipoPaciente } from "../../../types/tipos/Pacientes/tipoPaciente";
 
 
 export default function Home(){
+
+    const [paciente, setPaciente] = useState<TipoPaciente>();
+
+    useEffect(() =>{
+            const dadosSalvos = sessionStorage.getItem("paciente");
+            if (dadosSalvos) {
+                setPaciente(JSON.parse(dadosSalvos));
+            }
+        }, []);
+
     return( 
         <main className="pageHome">
+            {paciente ? 
+            (<div className="paciente">
+                <h1>Olá, {paciente.nome}</h1>
+                <p>
+                    O <strong>Cuida Mais HC</strong> é uma plataforma desenvolvida para aproximar você dos cuidados com a sua saúde. 
+                    Aqui, você pode <strong>consultar, agendar e confirmar suas consultas</strong>, receber lembretes automáticos e acessar informações de forma 
+                    <strong>simples e acessível</strong>. Nosso objetivo é tornar o atendimento no Hospital das Clínicas mais humano, eficiente e digital, 
+                    ajudando especialmente quem tem dificuldades com o uso de tecnologias. 
+                    Cuidar da sua saúde nunca foi tão fácil 💚
+                </p>
+            </div>): (<div></div>)}
             <div className="sobre">
                 <h1>Hospital das Clínicas FMUSP</h1>
                 <p>O Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo é um complexo de instituições de saúde, localizado em várias regiões da cidade de São Paulo, Brasil.</p>
@@ -21,14 +44,21 @@ export default function Home(){
                 <FaMobileAlt className="iconeBeneficios"/>
                 <p>Acessibilidade para saúde digital</p>
             </div>
-            <div className="cuidaMais">
+            {paciente?
+            (<div className="cuidaMais">
+                <h1>No nosso site</h1>
+                <p>Se tiver dúvidas acesse nossa página de dúvidas frequentes</p><Link className="btnCuidaMais" to="/FAQ">Dúvidas Frequentes</Link>
+                <p>Entre em contato conosco através da página de contato</p>
+                <Link className="btnCuidaMais" to="/contato">Contato</Link>
+            </div>): 
+            (<div className="cuidaMais">
                 <h1>No nosso site</h1>
                 <p>Entre na sua conta ou faça login</p>
                 <Link className="btnCuidaMais" to="/login-or-create-account">Entrar</Link>
                 <p>Se tiver dúvidas acesse nossa página de dúvidas frequentes</p><Link className="btnCuidaMais" to="/FAQ">Dúvidas Frequentes</Link>
                 <p>Entre em contato conosco através da página de contato</p>
                 <Link className="btnCuidaMais" to="/contato">Contato</Link>
-            </div>
+            </div>)}
             <div className="comoChegar">
                 <h1>Hospital das Clínicas FMUSP</h1>
                 <p>O Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo é um complexo de instituições de saúde, localizado em várias regiões da cidade de São Paulo, Brasil.</p>
