@@ -28,3 +28,12 @@ Oferecer uma experiência de usuário:
 - Utilização do **GitHub** para:  
   - Registro detalhado de alterações  
   - Colaboração eficaz entre os integrantes da equipe  
+
+## 🎯 Impacto Esperado
+
+- Redução significativa da taxa de faltas nas consultas.
+- Inclusão digital para pacientes com dificuldades tecnológicas.
+- Otimização do tempo da equipe médica.
+- Maior adesão à telemedicina e aos serviços digitais do hospital.
+
+---
