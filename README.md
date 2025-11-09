@@ -7,3 +7,8 @@
 - Thiago Mota  
 
 ---
+
+## 🔧 Tecnologias Utilizadas  
+- **React + Vite + TypeScript**  
+- Arquitetura **modular**  
+- Aplicação **SPA (Single Page Application)**  
