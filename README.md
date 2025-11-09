@@ -48,3 +48,7 @@ Oferecer uma experiência de usuário:
 
 - **Baixa adesão à telemedicina:**  
   Consultas online são perdidas porque pacientes não sabem como acessá-las, ou não conseguem entrar no horário marcado.
+
+## 📌 Solução do Projeto
+
+Desenvolver uma solução digital simples, inclusiva e eficaz para **reduzir a abstenção de pacientes nas consultas e exames do Hospital das Clínicas**, com foco em **idosos e pessoas com dificuldades no uso de tecnologia**.
