@@ -17,3 +17,9 @@
 - Maior **componentização**  
 - Melhor **eficiência no desenvolvimento**  
 - **Escalabilidade** do projeto  
+
+## 🎯 Objetivo  
+Oferecer uma experiência de usuário:  
+- **Coesa**  
+- **Responsiva** em todos os dispositivos  
+- Focada em **acessibilidade** e **usabilidade**  
