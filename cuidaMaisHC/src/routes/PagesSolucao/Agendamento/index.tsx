@@ -16,10 +16,10 @@ export default function Agendamento(){
         });
         alert("Agendamento realizado com sucesso!");
         navigate("/");
-    });
+    }); 
 
     return(
-        <main className="pageAgendamento">
+        <main className="flex flex-col items-center text-[var(--color-font-black)] font-bold text-[1.2rem] my-10 lg:mt-50 xl:mt-50 2xl:mt-60">
             <h1>Agendamento</h1>
             <FormAgendamento
                 register={register}

@@ -8,7 +8,7 @@ const URL_API = import.meta.env.VITE_URL_API;
 export default function Login(){
     const navigate = useNavigate();
     const {register, handleSubmit} = useForm<tipoLogin>();
- 
+  
     const onSubmit = handleSubmit(async (data) => {
     try {
       const response = await fetch(`${URL_API}/paciente`,{
@@ -35,7 +35,7 @@ export default function Login(){
  
 
     return(
-        <main className="pageLogin">
+        <main className="flex flex-col items-center text-[var(--color-font-black)] font-bold text-[1.2rem] my-10 my-10 lg:mt-50 xl:mt-50 2xl:mt-60">
             <h1>Faça login na sua conta</h1>
             <FormLogin
             register={register}

@@ -10,15 +10,15 @@ export default function IntegrantesDetails(){
     const encontrado = integrante[0];
     
     return(
-        <main className="pageDetails">
-            <h1 className="text">Detalhes do {encontrado.nome}</h1>
+        <main className="flex flex-col items-center my-10 text-center lg:my-55 xl:my-65">
+            <h1 className="font-bold text-[1.2rem] text-[var(--btn-color-menu)] text-center">Detalhes do {encontrado.nome}</h1>
             <div>
-                <div className="detailIntegrante">
-                    <img className="imgIntegrantes" src={encontrado.urlImg} alt={`Imagem do ${encontrado.nome}`} />
+                <div className="flex flex-col items-center justify-center gap-2 items-center shadow-2xl w-[var(--size-X-detail-intg)] h-[var(--size-Y-detail-intg)] rounded-2xl p-8 gap-6 m-10 xl:h-[70vh] 2xl:h-[75vh]">
+                    <img className="w-[var(--img-integrantes)] rounded-lg" src={encontrado.urlImg} alt={`Imagem do ${encontrado.nome}`} />
                     <p>{encontrado.paragrafo}</p>
-                    <div className="btnIntegrantes">
-                        <Link className="btnGit" target="_blank" rel="noopner noreferrer" to={`${encontrado.urlGit}`}><FaGithub/></Link>
-                        <Link className="btnlinkedIn" target="_blank" rel="noopner noreferrer" to={`${encontrado.urlLinkedIn}`}><FaLinkedin/></Link>  
+                    <div className="flex flex-wrap gap-10">
+                        <Link className="flex flex-wrap items-center justify-center bg-[var(--btn-color-menu)] w-[var(--btn-size-X-detail)] h-[var(--btn-size-Y-detail)] text-[1.2rem] text-center text-white font-bold rounded-full shadow-2xl" target="_blank" rel="noopner noreferrer" to={`${encontrado.urlGit}`}><FaGithub/></Link>
+                        <Link className="flex flex-wrap items-center justify-center bg-[var(--btn-color-menu)] w-[var(--btn-size-X-detail)] h-[var(--btn-size-Y-detail)] text-[1.2rem] text-center text-white font-bold rounded-full shadow-2xl" target="_blank" rel="noopner noreferrer" to={`${encontrado.urlLinkedIn}`}><FaLinkedin/></Link>  
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ const URL_API = import.meta.env.VITE_URL_API;
 export default function LoginOrCreateAccount(){    
     const navigate = useNavigate();
     const {register, handleSubmit} = useForm<tipoLoginOrCreateAccount>();
-
+ 
     const onSubmit = handleSubmit(async (data) => {
     try {
       const response = await fetch(`${URL_API}/paciente`,{
@@ -31,7 +31,7 @@ export default function LoginOrCreateAccount(){
   }); 
 
     return(
-        <main className="pageLoginOrCreate">
+        <main className="flex flex-col items-center text-[var(--color-font-black)] font-bold text-[1.2rem] my-10 lg:mt-50">
             <h1>Entre ou crie uma conta</h1>
             <FormloginOrCreateAccount
             register={register}
