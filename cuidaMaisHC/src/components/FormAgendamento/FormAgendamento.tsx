@@ -3,7 +3,7 @@ import type { tipoFormAgendamento } from "../../types/Forms/tipoFormAgendamento"
 export default function FormAgendamento({register, onSubmit}: tipoFormAgendamento){
     return(
         <div className="agendamento"> 
-            <form className="border-5 rounded-2xl w-[var(--form-size-X-agdnt)] h-[var(--form-size-Y-agdnt)] p-2 border-gray-800 m-10 flex flex-col shadow-2xl md:w-[45vw] lg:w-[40vw]  xl:w-[30vw] xl:h-[110vh]" onSubmit={onSubmit}>
+            <form className="border-5 rounded-2xl w-[var(--form-size-X-agdnt)] h-[var(--form-size-Y-agdnt)] p-2 border-gray-800 m-10 flex flex-col shadow-2xl md:w-[45vw] lg:w-[40vw]  xl:w-[30vw] xl:h-[140vh]" onSubmit={onSubmit}>
                 <div className="flex flex-col m-4 gap-3">
                     <label className="text-[1rem]">Cpf: </label>
                     <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="text" placeholder="Digite seu cpf"{...register("cpf", { required: true, maxLength: 11})}/>
