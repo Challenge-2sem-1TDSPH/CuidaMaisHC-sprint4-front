@@ -1,1 +1,9 @@
-###CuidaMaisHC-sprint4-front
+# 🏥 CuidaMaisHC  
+
+## 👨‍💻 Integrantes do Projeto
+
+- Moisés Waidemann  
+- Gabriel Sbrana  
+- Thiago Mota  
+
+---
