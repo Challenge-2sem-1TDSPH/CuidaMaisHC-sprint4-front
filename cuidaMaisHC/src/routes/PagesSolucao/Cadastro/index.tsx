@@ -17,7 +17,7 @@ export default function Cadastro(){
             dataNascimento: dataFormatada,
             cpf: data.cpf,
             senha: data.senha
-        };
+        }; 
 
         await fetch(`${URL_API}/paciente`,{
             method:"POST",
@@ -33,7 +33,7 @@ export default function Cadastro(){
     }); 
 
     return(
-        <main className="pageCadastro">
+        <main className="flex flex-col items-center text-[var(--color-font-black)] font-bold text-[1.2rem] my-10 lg:mt-50 xl:mt-50 2xl:mt-60">
             <h1>Cadastro</h1>
             <p>Você não possui cadastro, cadastre-se agora</p>
             <FormCadastro
