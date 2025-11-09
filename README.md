@@ -37,3 +37,14 @@ Oferecer uma experiência de usuário:
 - Maior adesão à telemedicina e aos serviços digitais do hospital.
 
 ---
+
+## 💡 Problemas Identificados
+
+- **Alta taxa de abstenção (faltas):**  
+  Pacientes esquecem datas de consultas e exames, especialmente idosos que não utilizam aplicativos. Isso causa buracos na agenda médica e aumento das filas.
+
+- **Dificuldade com tecnologia (apps/senhas):**  
+  Muitos pacientes têm dificuldades com logins, senhas ou uso de apps de saúde. Isso gera barreiras de acesso a serviços essenciais como resultados de exames ou consultas online.
+
+- **Baixa adesão à telemedicina:**  
+  Consultas online são perdidas porque pacientes não sabem como acessá-las, ou não conseguem entrar no horário marcado.
