@@ -23,3 +23,8 @@ Oferecer uma experiência de usuário:
 - **Coesa**  
 - **Responsiva** em todos os dispositivos  
 - Focada em **acessibilidade** e **usabilidade**  
+
+## 📂 Versionamento  
+- Utilização do **GitHub** para:  
+  - Registro detalhado de alterações  
+  - Colaboração eficaz entre os integrantes da equipe  
