@@ -3,26 +3,26 @@ import type { tipoFormAgendamento } from "../../types/Forms/tipoFormAgendamento"
 export default function FormAgendamento({register, onSubmit}: tipoFormAgendamento){
     return(
         <div className="agendamento"> 
-            <form className="formAgendamento" onSubmit={onSubmit}>
-                <div>
-                    <label>Cpf: </label>
-                    <input type="text" placeholder="Digite seu cpf"{...register("cpf", { required: true, maxLength: 11})}/>
+            <form className="border-5 rounded-2xl w-[var(--form-size-X-agdnt)] h-[var(--form-size-Y-agdnt)] p-2 border-gray-800 m-10 flex flex-col shadow-2xl md:w-[45vw] lg:w-[40vw]  xl:w-[30vw] xl:h-[140vh]" onSubmit={onSubmit}>
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Cpf: </label>
+                    <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="text" placeholder="Digite seu cpf"{...register("cpf", { required: true, maxLength: 11})}/>
                 </div>
-                <div>
-                    <label>Nome: </label>
-                    <input type="text" placeholder="Digite seu nome"{...register("nome", { required: true, maxLength: 200})} />
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Nome: </label>
+                    <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="text" placeholder="Digite seu nome"{...register("nome", { required: true, maxLength: 200})} />
                 </div>
-                <div>
-                    <label>Telefone: </label>
-                    <input type="text" placeholder="Digite seu telefone"{...register("telefone", { required: true, maxLength: 11, minLength:11})}/>
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Telefone: </label>
+                    <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="text" placeholder="Digite seu telefone"{...register("telefone", { required: true, maxLength: 11, minLength:11})}/>
                 </div>
-                <div>
-                    <label>Data: </label>
-                    <input type="date" {...register("data", { required: true, maxLength: 50})}/> 
+                <div className="flex flex-col m-4 gap-3"> 
+                    <label className="text-[1rem]">Data: </label>
+                    <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="date" {...register("data", { required: true, maxLength: 50})}/> 
                 </div>
-                <div>
-                    <label>Horário: </label>
-                    <select {...register("horario", { required: true })}>
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Horário: </label>
+                    <select className="text-[1.2rem] m-2 rounded-sm border-b-2" {...register("horario", { required: true })}>
                         <option value=""></option>
                         <option value="07:00">07:00</option>
                         <option value="07:30">07:30</option>
@@ -54,9 +54,9 @@ export default function FormAgendamento({register, onSubmit}: tipoFormAgendament
                     </select>
 
                 </div>
-                <div>
-                    <label>Especialidade: </label>
-                    <select {...register("especialidade", { required: true })}>
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Especialidade: </label>
+                    <select className="text-[1.2rem] m-2 rounded-sm border-b-2" {...register("especialidade", { required: true })}>
                         <option value=""></option>
                         <option value="Atenção a Doença Renal Crônica">Atenção a Doença Renal Crônica</option>
                         <option value="Atenção à Obesidade">Atenção à Obesidade</option>
@@ -96,12 +96,14 @@ export default function FormAgendamento({register, onSubmit}: tipoFormAgendament
                     </select>
 
                 </div>
-                <div>
-                    <label>Observações: </label>
-                    <input type="text"  placeholder="Opcional"{...register("observacoes", { required: false, maxLength: 200})}/>
+                <div className="flex flex-col m-4 gap-3">
+                    <label className="text-[1rem]">Observações: </label>
+                    <input className="p-1 text-[1.2rem] m-2 rounded-sm border-b-2" type="text"  placeholder="Opcional"{...register("observacoes", { required: false, maxLength: 200})}/>
                 </div>
-                <div className="divButton">
-                    <button className="hover:cursor-pointer" type="submit">Agendar</button>
+                <div className="flex justify-center">
+                    <div className="flex justify-center bg-[var(--btn-color-menu)] w-[var(--btn-size-X-menu)] h-[var(--btn-size-Y-menu)] text-[1.2rem] text-center text-white font-bold rounded-2xl my-5 md:w-[35vw] lg:w-[30vw] xl:w-[20vw] ">
+                        <button className="hover:cursor-pointer" type="submit">Agendar</button>
+                    </div>
                 </div>
             </form>
         </div>

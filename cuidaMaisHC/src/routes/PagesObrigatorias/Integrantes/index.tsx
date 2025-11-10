@@ -8,9 +8,9 @@ export default function Integrantes(){
     const todosIntegrante: TipoIntegrante[] = integrantes;
 
     return(
-        <main className="pageIntegrante">
-            <h1>Integrantes</h1>
-            <div className="integrante">{todosIntegrante.map((i) => (
+        <main className="text-center flex flex-col items-center my-10 lg:mt-50 xl:mt-60 2xl:mt-70">
+            <h1 className="font-bold text-[1.2rem] text-[var(--btn-color-menu)] text-center">Integrantes</h1>
+            <div className="text-[var(--color-font-black)] text-[1rem] text-center lg:flex lg:flex-wrap">{todosIntegrante.map((i) => (
                 <Link to={`/integrantes/${i.id}`}>
                     <CardIntegrantes integrante={i}/>
                 </Link>
