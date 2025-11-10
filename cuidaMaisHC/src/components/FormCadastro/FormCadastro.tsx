@@ -3,7 +3,7 @@ import type { TipoPropsFormCadastro } from "../../types/Forms/tipoFormCadastro";
 export default function FormCadastro({register, onSubmit}: TipoPropsFormCadastro){
     return( 
         <div>
-            <form className="border-5 rounded-2xl w-[var(--form-size-X-create)] h-[var(--form-size-Y-create)] p-2 border-gray-800 m-10 flex flex-col shadow-2xl lg:w-[40vw]  xl:w-[30vw]" onSubmit={onSubmit}>
+            <form className="border-5 rounded-2xl w-[var(--form-size-X-create)] h-[var(--form-size-Y-create)] p-2 border-gray-800 m-10 flex flex-col shadow-2xl lg:w-[40vw] xl:h-[80vh]  xl:w-[30vw]" onSubmit={onSubmit}>
                  <div className="flex flex-col m-4 gap-3">
                     <label className="text-[1rem]">Nome: </label>
                     <input className="text-[1.2rem] m-2 rounded-sm border-b-2" type="text" {...register("nome", { required: true, maxLength: 200})} />
